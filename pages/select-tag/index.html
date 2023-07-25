@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 6 - Lectia 11</title>
+    <style>
+      /* matches a password input */
+      input[type="password"] {
+        color: royalblue;
+      }
+
+      input {
+        color: aqua;
+      }
+
+      input.red-caret {
+        caret-color: red;
+      }
+
+      input::placeholder {
+        color: #5f5f5f;
+      }
+
+      .example-form {
+        background: lightblue;
+        border-radius: 8px;
+        padding: 16px;
+        max-width: 500px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .form-group > label {
+        flex: 1;
+      }
+
+      .form-group > *:nth-child(2) {
+        flex: 2;
+      }
+
+      .form-group + .form-group {
+        margin-top: 16px;
+      }
+
+      .btn-submit {
+        background: royalblue;
+        border: none;
+        border-radius: 2px;
+        color: #f2f2f2;
+        cursor: pointer;
+        letter-spacing: 0.09em;
+        margin-left: auto;
+        max-width: 128px;
+        padding: 8px 16px;
+        text-transform: uppercase;
+      }
+
+      .btn-submit:hover,
+      .btn-submit:focus {
+        background: rgb(50, 83, 180);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">
+        Introducerea datelor - Tag-ul &lt;select&gt;
+      </h1>
+      <p>
+        Putem limita user-ul la introducerea datelor pentru un camp, si in loc
+        sa il lasam sa introduca printr-un &lt;input type="text"&gt; orice
+        valoare vrea, il putem "obliga" sa aleaga dintr-o lista predefinita de
+        noi
+      </p>
+      <section class="lesson-example mt-lg">
+        <form name="dino-form" class="example-form">
+          <div role="group" class="form-group">
+            <label for="dino-select">Alege un dinozaur:</label>
+            <select id="dino-select" name="dinosaur">
+              <optgroup label="Test">
+                <option>Tyrannosaurus</option>
+                <option>Velociraptor</option>
+                <option>Deinonychus</option>
+              </optgroup>
+              <optgroup label="Sauropods">
+                <option>Diplodocus</option>
+                <option selected>Saltasaurus</option>
+                <option>Apatosaurus</option>
+              </optgroup>
+            </select>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

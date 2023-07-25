@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 6 - Lectia 11</title>
+    <style>
+      .form {
+        background: lightblue;
+        padding: 16px;
+        max-width: 50%;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .form-group label {
+        flex: 1;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        flex: 2;
+      }
+
+      .form-group input[type="color"] {
+        max-width: 64px;
+      }
+
+      .form-group + .form-group {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">Datalist si autocomplete</h1>
+      <section class="lesson-example mt-lg">
+        <form class="form">
+          <div class="form-group">
+            <label for="city">Oras:</label>
+            <input list="city-options" id="city" name="city" type="text" />
+
+            <datalist id="city-options">
+              <option value="Bucureşti"></option>
+              <option value="Iași"></option>
+              <option value="Timişoara"></option>
+              <option value="Cluj-Napoca"></option>
+              <option value="Constanța"></option>
+              <option value="Craiova"></option>
+              <option value="Brașov"></option>
+              <option value="Satu Mare"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="visitHours">Ora de vizitare</label>
+            <input type="time" name="visitHours" list="orePopulare" />
+            <datalist id="orePopulare">
+              <option value="12:00"></option>
+              <option value="13:00"></option>
+              <option value="14:00"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="colors"
+              >Alege o culoare (preferabil o nuanta de rosu):</label
+            >
+            <input type="color" list="redColors" id="colors" />
+            <datalist id="redColors">
+              <option value="#800000"></option>
+              <option value="#8B0000"></option>
+              <option value="#A52A2A"></option>
+              <option value="#DC143C"></option>
+            </datalist>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 6 - Lectia 11</title>
+    <style>
+      .form label {
+        display: flex;
+        align-items: baseline; /* Baseline centering */
+        padding: 8px 0;
+      }
+
+      .form input[type="radio"] {
+        flex: none;
+        margin-right: 10px;
+      }
+
+      .form input[type="checkbox"] {
+        flex: none;
+        margin-right: 10px;
+      }
+
+      .form {
+        background: lightblue;
+        padding: 16px;
+        max-width: 50%;
+      }
+
+      .form_two-column-section {
+        display: flex;
+        width: 100%;
+        gap: 16px;
+      }
+
+      .form_two-column-section > div {
+        flex: 1 1 auto;
+        width: 50%;
+      }
+
+      .btn-submit {
+        background: royalblue;
+        border: none;
+        border-radius: 2px;
+        color: #f2f2f2;
+        cursor: pointer;
+        letter-spacing: 0.09em;
+        margin-left: auto;
+        max-width: 128px;
+        padding: 8px 16px;
+        text-transform: uppercase;
+      }
+
+      .btn-submit:hover,
+      .btn-submit:focus {
+        background: rgb(50, 83, 180);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">Selectare cu Radio si Checkbox</h1>
+      <section class="lesson-example mt-lg">
+        <form class="form">
+          <div class="form_two-column-section">
+            <div role="group">
+              <p>Cum vreti sa fiti contactat?</p>
+              <label>
+                <input type="radio" id="email" name="messaging" value="email" />
+                Email
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  id="phone"
+                  name="messaging"
+                  value="phone"
+                  checked
+                />
+                Phone
+              </label>
+
+              <label>
+                <input type="radio" id="sms" name="messaging" value="sms" />
+                SMS
+              </label>
+
+              <button type="submit" class="btn-submit">Submit</button>
+            </div>
+
+            <div role="group">
+              <p>In ce zile vreti sa primiti notificare?</p>
+              <label>
+                <input
+                  type="checkbox"
+                  name="frequency"
+                  id="monday"
+                  value="monday"
+                  checked
+                />
+                Luni
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="frequency"
+                  id="tuesday"
+                  value="tuesday"
+                />
+                Marti
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="frequency"
+                  id="wednesday"
+                  value="wednesday"
+                  checked
+                />
+                Miercuri
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="frequency"
+                  id="thursday"
+                  value="thursday"
+                />
+                Joi
+              </label>
+              <label>
+                <input type="checkbox" name="frequency" id="friday" />
+                Vineri
+              </label>
+              <label>
+                <input type="checkbox" name="frequency" id="saturday" />
+                Sambata
+              </label>
+              <label>
+                <input type="checkbox" name="frequency" id="sunday" />
+                Duminica
+              </label>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

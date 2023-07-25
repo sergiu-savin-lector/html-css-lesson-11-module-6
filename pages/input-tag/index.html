@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 6 - Lectia 11</title>
+    <style>
+      /* matches a password input */
+      input[type="password"] {
+        color: royalblue;
+      }
+
+      input {
+        color: red;
+      }
+
+      input.red-caret {
+        caret-color: red;
+      }
+
+      input::placeholder {
+        color: rgb(255, 0, 0);
+      }
+
+      .example-form {
+        background: lightblue;
+        border-radius: 8px;
+        padding: 16px;
+        max-width: 500px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .form-group label {
+        flex: 1;
+      }
+
+      .form-group input {
+        padding: 10px 15px;
+        border-radius: 10px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        flex: 2;
+      }
+
+      .form-group + .form-group {
+        margin-top: 16px;
+      }
+
+      .btn-submit {
+        background: royalblue;
+        border: none;
+        border-radius: 2px;
+        color: #f2f2f2;
+        cursor: pointer;
+        letter-spacing: 0.09em;
+        margin-left: auto;
+        max-width: 128px;
+        padding: 8px 16px;
+        text-transform: uppercase;
+      }
+
+      .btn-submit:hover,
+      .btn-submit:focus {
+        background: rgb(50, 83, 180);
+      }
+
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">
+        Introducerea datelor - Tag-ul &lt;input&gt;
+      </h1>
+      <p>
+        Atributul <em>name</em> este utilizat în cererea HTTP trimisă de browser
+        către server. <em>Id-ul</em> este pentru CSS și JavaScript ca referință
+        la elementul cu acel id.
+      </p>
+      <section class="lesson-example mt-lg">
+        <form name="signup_form" class="example-form">
+          <div role="group" class="form-group">
+            <label for="name">Nume</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="off"
+              autofocus
+              placeholder="Numele tau"
+              class="red-caret"
+            />
+          </div>
+          <div role="group" class="form-group">
+            <label for="password">Parola</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div role="group" class="form-group">
+            <label for="phone">Telefon</label>
+            <input autocomplete="tel" type="tel" id="phone" name="phone" />
+          </div>
+
+          <div role="group" class="form-group"></div>
+          <div role="group" class="form-group">
+            <label for="date">Data</label>
+            <input type="date" id="date" name="date" />
+          </div>
+          <div role="group" class="form-group">
+            <label for="mesage">Mesaj</label>
+            <textarea
+              id="mesage"
+              name="mesage"
+              rows="3"
+              cols="10"
+              placeholder="Mesajul aici"
+            >
+            </textarea>
+          </div>
+          <div role="group" class="form-group">
+            <input type="file" name="" id="">
+          </div>
+          <div role="group" class="form-group">
+            <input type="hidden" name="" id="">
+          </div>
+          <div role="group" class="form-group">
+            <button class="btn-submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../../form.js" type="text/javascript"></script>
+  </body>
+</html>

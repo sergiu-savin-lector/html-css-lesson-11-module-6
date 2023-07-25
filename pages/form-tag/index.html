@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../styles/reset.css" />
+  <link rel="stylesheet" href="../../styles/fonts.css" />
+  <link rel="stylesheet" href="../../styles/main.css" />
+
+  <title>HTML/CSS Modulul 6 - Lectia 11</title>
+  <style></style>
+</head>
+
+<body>
+  <main class="container example-page">
+    <h1 class="heading-primary sticky">Formulare in HTML</h1>
+
+    <section class="lesson-example mt-lg">
+      <!-- Atributele action si method, sunt folosite pentru transmiterea datelor spre server -->
+      <form action="" method="get" name="signup_form" autocomplete="on" novalidate>
+        <div class="form-example">
+          <label for="name">Enter your name: </label>
+          <input type="text" name="name" id="name" required placeholder="Introduceti numele aici"/>
+        </div>
+        <div class="form-example">
+          <label for="age">Enter your age: </label>
+          <input type="number" min="18" max="100" name="age" id="age" />
+        </div>
+        <div class="form-example">
+          <label for="email">Enter your email: </label>
+          <input type="email" name="email" id="email"  autocomplete="off"/>
+        </div>
+        <div class="form-example">
+          <input type="submit" value="submit">
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

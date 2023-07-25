@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>Intrebari</title>
+    <style>
+      form {
+        margin-top: 25px;
+      }
+
+      form label {
+        position: relative;
+      }
+
+      form label input {
+        padding: 0 25px;
+      }
+
+      form label input:focus {
+        outline: none;
+        border: 2px solid blue;
+      }
+
+      form label input:focus + .person-img {
+        color: red;
+        fill: red;
+      }
+
+      .person-img {
+        position: absolute;
+        left: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action=""><label for="">
+        <span>Username</span>
+        <input type="text">
+        <img src="./person.svg" alt="" class="person-img">
+      </label>
+    </form>
+      
+    </main>
+  </body>
+</html>
